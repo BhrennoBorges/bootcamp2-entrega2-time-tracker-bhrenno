@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Site Time Tracker — Extensão MV3</title>
+    <meta name="description" content="Extensão MV3 que cronometra o tempo gasto por domínio.">
+    <link rel="icon" href="../icons/icon32.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <header class="hero"><img src="../icons/icon32.png" alt="Ícone">
+            <h1>Site Time Tracker — Extensão MV3</h1>
+            <p class="lead">Cronometra, por domínio, quanto tempo você passa em cada site. Painel flutuante e resumo no
+                popup.</p>
+            <p class="btns"><a class="btn" href="https://github.com/BhrennoBorges/Etapa-Inicial-Bootcamp-II-Manifest-V3"
+                    target="_blank" rel="noopener">Repositório</a><a class="btn ghost"
+                    href="https://github.com/BhrennoBorges/Etapa-Inicial-Bootcamp-II-Manifest-V3/releases"
+                    target="_blank" rel="noopener">Baixar .zip</a></p>
+        </header>
+        <section class="grid">
+            <article class="card">
+                <h2>Como funciona</h2>
+                <ul>
+                    <li>O content script envia um “tick” por segundo apenas quando a aba está <em>visível</em>.</li>
+                    <li>O background soma esse tempo por domínio no <code>chrome.storage.local</code>.</li>
+                    <li>O popup mostra o total do domínio atual e permite zerar.</li>
+                    <li>Há uma preferência para exibir (ou não) o painel flutuante.</li>
+                </ul>
+            </article>
+            <article class="card">
+                <h2>Permissões</h2>
+                <ul>
+                    <li><code>storage</code> — persistir tempos e preferências.</li>
+                    <li><code>host_permissions</code> — <code>http://*/*</code> e <code>https://*/*</code> para rodar o
+                        content script.</li>
+                </ul>
+            </article>
+        </section>
+        <section class="card">
+            <h2>Instalação (modo desenvolvedor)</h2>
+            <ol>
+                <li>Acesse <kbd>chrome://extensions</kbd> e ative <strong>Developer mode</strong>.</li>
+                <li>Clique em <em>Load unpacked</em> e selecione a pasta do projeto.</li>
+                <li>Clique no ícone da extensão e veja o tempo do site atual.</li>
+            </ol>
+        </section>
+        <section class="card">
+            <h2>Capturas de tela</h2>
+            <p class="muted">Adicione imagens em <code>docs/img/</code> com nomes <code>popup.png</code>,
+                <code>options.png</code> e <code>content.png</code>.</p>
+            <div class="shots"><img src="img/popup.png" alt="Popup"><img src="img/options.png" alt="Opções"><img
+                    src="img/content.png" alt="Painel flutuante na página"></div>
+        </section>
+        <footer class="foot"><small>© 2025 Bhrenno — MIT</small></footer>
+    </div>
+</body>
+
+</html>
