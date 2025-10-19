@@ -1,4 +1,4 @@
-```markdown
+
 # Bootcamp Helper — Site Time Tracker (Manifest V3)
 
 Extensão para Chrome que **cronometra o tempo por domínio**. Apresenta um **painel flutuante** na página e um **resumo no popup**.
